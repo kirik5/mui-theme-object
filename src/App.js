@@ -1,6 +1,7 @@
 import './App.css';
 import MyComponent from "./MyComponent";
 import {createTheme, styled, ThemeProvider} from "@mui/material";
+import MyTextField from "./MyTextField";
 
 const paletteTheme = createTheme({
     palette: {
@@ -42,7 +43,16 @@ const myTheme = createTheme(paletteTheme, {
                     color: 'white',
                 },
             },
-        }
+        },
+        MyTextField: {
+            styleOverrides: {
+                root: {
+                   '& .MuiInputBase-input': {
+                       padding: '10px 20px',
+                   }
+                },
+            },
+        },
     }
 })
 
@@ -61,6 +71,7 @@ function App() {
                 <MyComponent variant={'primary'}>primary</MyComponent>
                 <MyComponent variant={'secondary'}>secondary</MyComponent>
                 <MyComponent variant={'neutral'}>secondary</MyComponent>
+                <MyTextField/>
             </Wrapper>
         </ThemeProvider>
     );
