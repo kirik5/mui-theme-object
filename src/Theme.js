@@ -27,19 +27,42 @@ const myTheme = createTheme(paletteTheme, {
                         boxShadow: '0 0 3px 0 #000000',
                     },
                 },
-                primary: {
-                    backgroundColor: paletteTheme.palette.primary.main,
-                    color: 'white',
-                },
-                secondary: {
-                    backgroundColor: paletteTheme.palette.secondary.main,
-                    color: 'white',
-                },
-                neutral: {
-                    backgroundColor: paletteTheme.palette.neutral.main,
-                    color: 'white',
-                },
+                // primary: {
+                //     backgroundColor: paletteTheme.palette.primary.main,
+                //     color: 'white',
+                // },
+                // secondary: {
+                //     backgroundColor: paletteTheme.palette.secondary.main,
+                //     color: 'white',
+                // },
+                // neutral: {
+                //     backgroundColor: paletteTheme.palette.neutral.main,
+                //     color: 'white',
+                // },
             },
+            variants: [
+                {
+                    props: {variant: 'primary'},
+                    style: {
+                        backgroundColor: paletteTheme.palette.primary.main,
+                        color: 'white',
+                    }
+                },
+                {
+                    props: {variant: 'secondary'},
+                    style: {
+                        backgroundColor: paletteTheme.palette.secondary.main,
+                        color: 'white',
+                    }
+                },
+                {
+                    props: {variant: 'neutral'},
+                    style: {
+                        backgroundColor: paletteTheme.palette.neutral.main,
+                        color: 'white',
+                    }
+                },
+            ]
         },
         MyTextField: {
             styleOverrides: {

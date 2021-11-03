@@ -8,9 +8,9 @@ const MyComponentStyled = styled('div', {
     slot: 'Root',
     overridesResolver: (props, styles) => [
         styles.root,
-        props.variant === 'primary' && styles.primary,
-        props.variant === 'secondary' && styles.secondary,
-        props.variant === 'neutral' && styles.neutral,
+        // props.variant === 'primary' && styles.primary,
+        // props.variant === 'secondary' && styles.secondary,
+        // props.variant === 'neutral' && styles.neutral,
     ]
 })(() => ({}))
 
